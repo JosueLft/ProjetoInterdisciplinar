@@ -10,7 +10,7 @@ s = "Sair"
 choosen = 0
 papel = Papel
 
-class Produto:
+class Cadastro:
 
     # função
     def menu_cadastro(self):
@@ -23,9 +23,9 @@ class Produto:
         print("  ||%13s(3)      ||" % c)
         print("  ||%12s(4)       ||" % s)
         print("  --------------------------")
-        prod = Produto
-        choosen = prod.choosen(prod)
-        prod.verify(choosen)
+        cad = Cadastro
+        choosen = cad.choosen(cad)
+        cad.verify(choosen)
 
     def choosen(self):
         escolha = int(input("Informe o indice de sua escolha: "))
@@ -70,5 +70,5 @@ def retornar():
     m = Menu
     m.menu(m)
 """if __name__ == '__main__':
-    prod = Produto
+    prod = Cadastro
     prod.menu_cadastro(prod)"""

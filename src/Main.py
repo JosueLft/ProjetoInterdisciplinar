@@ -1,13 +1,13 @@
 # -*- uncoding: utf-8 -*-
 
 # variaveis globais
-from Cadastro import Produto
+from Cadastro import Cadastro
 
 c = "Cadastro"
 v = "Visualizar"
 s = "Sair"
 escolha = 0
-p = Produto()
+p = Cadastro()
 choosen = 0
 
 class Menu:
