@@ -49,18 +49,18 @@ class Produto:
 
     def verify(escolha):
         if(escolha == 1):
-            print("Escolheu Cadastro de Papeis!\n")
+            print("\nCarregando arquivos de Cadastro de Papeis!\n")
         elif(escolha == 2):
-            print("Escolheu Cadastro de Caixas de Lapis!\n")
+            print("\nEscolheu Cadastro de Caixas de Lapis!\n")
         elif (escolha == 3):
-            print("Escolheu Cadastro de Cadernos!\n")
+            print("\nEscolheu Cadastro de Cadernos!\n")
         elif (escolha == 4):
-            print("Escolheu retornar ao menu inicial!\n")
-            importacao()
+            print("\nEscolheu retornar ao menu inicial!\n")
+            retornar()
         else:
-            print("Opção invalida!\nIremos retornar ao menu Inicial!\n")
+            print("\nOpção invalida!\nIremos retornar ao menu Inicial!\n")
 
-def importacao():
+def retornar():
     from Main import Menu
     m = Menu
     m.menu(m)
