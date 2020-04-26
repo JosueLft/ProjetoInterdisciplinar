@@ -7,6 +7,7 @@ gramatura = 0.0
 formato = ""
 textura = ""
 tipo = ""
+arquivo = open("papeis.txt", "a")
 
 class Papel:
 
@@ -25,6 +26,6 @@ class Papel:
 
         p = Papel(gramatura, formato, textura, tipo)
 
+        papel = (p._gramatura, p._formato, p._textura, p._tipo, "\n")# criando uma lista com as informações inseridas pelo usuario
 
-
-#if __name__ == '__main__':
+        arquivo.write(str(papel))# convertendo a lista para uma string e armazenando em um arquivo de texto
