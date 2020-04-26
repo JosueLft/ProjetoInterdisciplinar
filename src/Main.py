@@ -8,9 +8,9 @@ v = "Visualizar"
 s = "Sair"
 escolha = 0
 p = Produto()
+choosen = 0
 
 class Menu:
-
     # função
     def menu(self):
         print("=========================")
@@ -28,8 +28,7 @@ class Menu:
         escolha = int(input("Informe o indice de sua escolha: "))
         while True:
             if(escolha == 1):
-                print("\nCarregando arquivos de cadastro!")
-                p.menu_cadastro()
+                m.cadastro(m)
                 break
             elif(escolha == 2):
                 print("\nCarregando arquivos de exibição!")
@@ -41,7 +40,10 @@ class Menu:
                 print("Opção invalida!\nPor favor informar um opção valida de acordo com os indices!")
                 escolha = int(input("Informe o indice de sua escolha: "))
 
+    def cadastro(self):
+        print("\nCarregando arquivos de cadastro!")
+        p.menu_cadastro()
+
 if __name__ == '__main__':
     m = Menu
     m.menu(m)
-    m.choosen(m)

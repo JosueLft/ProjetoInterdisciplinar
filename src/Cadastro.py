@@ -1,11 +1,14 @@
 # -*- uncoding: utf-8 -*-
 
+from produtos.Papeis import Papel
+
 # variaveis globais
 p = "Folha de Papel"
 cl = "Caixa de Lápis"
 c = "Caderno"
 s = "Sair"
 choosen = 0
+papel = Papel
 
 class Produto:
 
@@ -50,6 +53,7 @@ class Produto:
     def verify(escolha):
         if(escolha == 1):
             print("\nCarregando arquivos de Cadastro de Papeis!\n")
+            papel.cad_Papel(p)
         elif(escolha == 2):
             print("\nEscolheu Cadastro de Caixas de Lapis!\n")
         elif (escolha == 3):
@@ -59,6 +63,7 @@ class Produto:
             retornar()
         else:
             print("\nOpção invalida!\nIremos retornar ao menu Inicial!\n")
+
 
 def retornar():
     from Main import Menu
