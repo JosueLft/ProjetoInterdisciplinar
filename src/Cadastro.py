@@ -1,6 +1,7 @@
 # -*- uncoding: utf-8 -*-
 
 from produtos.Papeis import Papel
+from produtos.Caderno import Caderno
 
 # variaveis globais
 p = "Folha de Papel"
@@ -9,6 +10,7 @@ c = "Caderno"
 s = "Sair"
 choosen = 0
 papel = Papel
+caderno = Caderno
 
 class Cadastro:
 
@@ -53,11 +55,12 @@ class Cadastro:
     def verify(escolha):
         if(escolha == 1):
             print("\nCarregando arquivos de Cadastro de Papeis!\n")
-            papel.cad_Papel(p)
+            papel.cadastro(papel)
         elif(escolha == 2):
             print("\nEscolheu Cadastro de Caixas de Lapis!\n")
         elif (escolha == 3):
-            print("\nEscolheu Cadastro de Cadernos!\n")
+            print("\nCarregando arquivos de Cadastro de Cadernos!\n")
+            caderno.cadastro(caderno)
         elif (escolha == 4):
             print("\nEscolheu retornar ao menu inicial!\n")
             retornar()
