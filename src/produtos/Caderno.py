@@ -2,7 +2,7 @@
 
 # variaveis globais
 from produtos.Produto import Produtos
-arquivo = open("cadenos.txt", "a")
+arquivo = open("cadernos.txt", "a")
 
 
 class Caderno(Produtos):

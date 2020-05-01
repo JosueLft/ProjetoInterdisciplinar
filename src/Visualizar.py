@@ -14,12 +14,12 @@ papel = Papel
 caderno = Caderno
 caixaLapis = CaixaLapis
 
-class Cadastro:
+class Visualiza():
 
     # função
     def menu_cadastro(self):
         print("==============================")
-        print("== Loft Papelaria Cadastro  ==")
+        print("== Loft Papelaria Exibição  ==")
         print("==============================")
         print("  --------------------------")
         print("  ||%17s(1)  ||" % p)
@@ -27,9 +27,9 @@ class Cadastro:
         print("  ||%13s(3)      ||" % c)
         print("  ||%13s(4)      ||" % s)
         print("  --------------------------")
-        cad = Cadastro
-        choosen = cad.choosen(cad)
-        cad.verify(choosen)
+        view = Visualiza
+        choosen = view.choosen(view)
+        view.verify(choosen)
 
     def choosen(self):
         escolha = int(input("Informe o indice de sua escolha: "))
@@ -56,25 +56,28 @@ class Cadastro:
 
     def verify(escolha):
         if(escolha == 1):
-            print("\nCarregando arquivos de Cadastro de Papeis!\n")
-            papel.cadastro(papel)
+            print("\nCarregando arquivos de Visualização de Papeis!\n")
+            indices = ["Marca", "Gramatura", "Formato", "Textura", "Tipo", "Preço"]
+            papel.visualiza(papel, indices, "papeis")
         elif(escolha == 2):
-            print("\nCarregando arquivos de Cadastro de Caixas de Lapis!\n")
-            caixaLapis.cadastro(caixaLapis)
+            print("\nCarregando arquivos de Visualização de Caixas de Lapis!\n")
+            indices = ["Marca", "QtdFolhas","Colorido","Preço"]
+            caixaLapis.visualiza(caixaLapis, indices, "caixaLapis")
         elif (escolha == 3):
-            print("\nCarregando arquivos de Cadastro de Cadernos!\n")
-            caderno.cadastro(caderno)
+            print("\nCarregando arquivos de Visualização de Cadernos!\n")
+            indices = ["Marca", "Tamanho", "Gramatura", "QtdFolhas", "Capadura", "Preço"]
+            caderno.visualiza(caderno, indices, "cadernos")
         elif (escolha == 4):
             print("\nEscolheu retornar ao menu inicial!\n")
+            retornar()
         else:
             print("\nOpção invalida!\nIremos retornar ao menu Inicial!\n")
-
 
 def retornar():
     from Main import Menu
     m = Menu
     m.menu(m)
 
-"""if __name__ == '__main__':
-    prod = Cadastro
-    prod.menu_cadastro(prod)"""
+if __name__ == '__main__':
+    v = Visualiza
+    v.menu_cadastro(v)
