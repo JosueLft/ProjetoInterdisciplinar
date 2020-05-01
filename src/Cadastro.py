@@ -2,6 +2,7 @@
 
 from produtos.Papeis import Papel
 from produtos.Caderno import Caderno
+from produtos.CaixaLapis import CaixaLapis
 
 # variaveis globais
 p = "Folha de Papel"
@@ -11,6 +12,7 @@ s = "Sair"
 choosen = 0
 papel = Papel
 caderno = Caderno
+caixaLapis = CaixaLapis
 
 class Cadastro:
 
@@ -56,11 +58,15 @@ class Cadastro:
         if(escolha == 1):
             print("\nCarregando arquivos de Cadastro de Papeis!\n")
             papel.cadastro(papel)
+            retornar()
         elif(escolha == 2):
-            print("\nEscolheu Cadastro de Caixas de Lapis!\n")
+            print("\nCarregando arquivos de Cadastro de Caixas de Lapis!\n")
+            caixaLapis.cadastro(caixaLapis)
+            retornar()
         elif (escolha == 3):
             print("\nCarregando arquivos de Cadastro de Cadernos!\n")
             caderno.cadastro(caderno)
+            retornar()
         elif (escolha == 4):
             print("\nEscolheu retornar ao menu inicial!\n")
             retornar()

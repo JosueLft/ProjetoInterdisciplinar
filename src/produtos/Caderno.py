@@ -7,8 +7,8 @@ arquivo = open("cadenos.txt", "a")
 
 class Caderno(Produtos):
 
-    def __init__(self, tamanho, gramatura, qtdFolhas, capadura, nome, marca, preco):
-        super().__init__(nome, marca, preco)
+    def __init__(self, tamanho, gramatura, qtdFolhas, capadura, marca, preco):
+        super().__init__(marca, preco)
         self._tamanho = tamanho
         self._gramatura = gramatura
         self._qtdFolhas = qtdFolhas
@@ -21,18 +21,18 @@ class Caderno(Produtos):
         gramatura = float(input("Informe a gramatura do caderno: "))
         qtdFolhas = input("Informe a quantidade de folhas do caderno: ")
         capadura = input("Informe se é capadura o caderno: (S/N)")
-        print("\nCaderno Cadastrado com Sucesso!\n")
 
         if (capadura.upper() == "S") | (capadura.upper() == "SIM"):
             capa = True
         else:
             capa = False
 
-        c = Caderno(super().nome, super().marca, super().preco, tamanho, gramatura, qtdFolhas, capa)
+        c = Caderno(tamanho, gramatura, qtdFolhas, capa, lista[0], lista[1])
 
-        caderno = (c.nome, c.marca, c.preco, tamanho, gramatura, qtdFolhas, capa)  # criando uma lista com as informações inseridas pelo usuario
+        caderno = (c.marca, tamanho, gramatura, qtdFolhas, capa, c.preco)  # criando uma lista com as informações inseridas pelo usuario
 
         arquivo.write(str(caderno) + "\n")  # convertendo a lista para uma string e armazenando em um arquivo de texto
+        print("\nCaderno Cadastrado com Sucesso!\n")
 
     # get e set
     @property

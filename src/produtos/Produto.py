@@ -5,21 +5,15 @@
 
 class Produtos:
 
-    def __init__(self, nome, marca, preco):
-        self._nome = nome
+    def __init__(self, marca, preco):
         self._preco = preco
         self._marca = marca
 
     def cadastro(self):
-        nome = input("Informe o nome do produto: ")
         marca = input("Informe a marca do produto: ")
         preco = float(input("Informe o preco do Produto: "))
 
-        return nome, preco, marca
-
-    @property
-    def nome(self):
-        return self._nome
+        return preco, marca
 
     @property
     def marca(self):
@@ -28,7 +22,3 @@ class Produtos:
     @property
     def preco(self):
         return self._preco
-
-    @nome.setter  # metodo set
-    def nome(self, nome):
-            self.nome = nome

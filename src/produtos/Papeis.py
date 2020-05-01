@@ -8,8 +8,8 @@ arquivo = open("papeis.txt", "a") # criando variavel de escrita em arquivo de te
 
 class Papel(Produtos):
 
-    def __init__(self, gramatura, formato, textura, tipo, nome, marca, preco): # criando construtor da classe
-        super().__init__(nome, marca, preco) # instanciando os atributos da classe mae
+    def __init__(self, gramatura, formato, textura, tipo, marca, preco): # criando construtor da classe
+        super().__init__(marca, preco) # instanciando os atributos da classe mae
         self._gramatura = gramatura # instanciando atributos da propria classe
         self._formato = formato
         self._textura = textura
@@ -21,14 +21,13 @@ class Papel(Produtos):
         formato = input("Informe o formato do papel: ")
         textura = input("Informe a textura do papel: ")
         tipo = input("Informe o tipo do papel: ")
-        print("\nPapel Cadastrado com Sucesso!\n")
 
-        p = Papel(super().nome, super().marca, super().preco, gramatura, formato, textura, tipo) # passando os valores como parametros
+        p = Papel(gramatura, formato, textura, tipo, lista[0], lista[1]) # passando os valores como parametros
 
-        papel = (p.nome, p.marca, p.preco, gramatura, formato, textura, tipo)# criando uma lista com as informações inseridas pelo usuario
+        papel = (p.marca, gramatura, formato, textura, tipo, p.preco)# criando uma lista com as informações inseridas pelo usuario
 
         arquivo.write(str(papel) + "\n")# convertendo a lista para uma string e armazenando em um arquivo de texto
-
+        print("\nPapel Cadastrado com Sucesso!\n")
 
     # get e set
     @property
