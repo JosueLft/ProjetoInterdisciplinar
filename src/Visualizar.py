@@ -47,7 +47,6 @@ class Visualiza():
                 return escolha
                 break
             elif(escolha == 4):
-                print("\nVoltando ao Menu Inicial!")
                 return escolha
                 break
             else:
@@ -55,18 +54,19 @@ class Visualiza():
                 escolha = int(input("Informe o indice de sua escolha: "))
 
     def verify(escolha):
+        v = Visualiza
         if(escolha == 1):
             print("\nCarregando arquivos de Visualização de Papeis!\n")
-            indices = ["Marca", "Gramatura", "Formato", "Textura", "Tipo", "Preço"]
-            papel.visualiza(papel, indices, "papeis")
+            papel.visualiza(papel, "papeis")
+            v.menu_cadastro(v)
         elif(escolha == 2):
             print("\nCarregando arquivos de Visualização de Caixas de Lapis!\n")
-            indices = ["Marca", "QtdFolhas","Colorido","Preço"]
-            caixaLapis.visualiza(caixaLapis, indices, "caixaLapis")
+            caixaLapis.visualiza(caixaLapis, "caixaLapis")
+            v.menu_cadastro(v)
         elif (escolha == 3):
             print("\nCarregando arquivos de Visualização de Cadernos!\n")
-            indices = ["Marca", "Tamanho", "Gramatura", "QtdFolhas", "Capadura", "Preço"]
-            caderno.visualiza(caderno, indices, "cadernos")
+            caderno.visualiza(caderno, "cadernos")
+            v.menu_cadastro(v)
         elif (escolha == 4):
             print("\nEscolheu retornar ao menu inicial!\n")
             retornar()
@@ -77,7 +77,3 @@ def retornar():
     from Main import Menu
     m = Menu
     m.menu(m)
-
-if __name__ == '__main__':
-    v = Visualiza
-    v.menu_cadastro(v)

@@ -15,7 +15,7 @@ class Produtos:
 
         return preco, marca
 
-    def visualiza(self, i, arquivo):
+    def visualiza(self, arquivo):
         arquivo = arquivo + ".txt"
         file = open(arquivo, "r")
 

@@ -2,13 +2,15 @@
 
 # variaveis globais
 from Cadastro import Cadastro
+from Visualizar import Visualiza
 
 c = "Cadastro"
-v = "Visualizar"
+e = "Visualizar"
 s = "Sair"
 escolha = 0
 p = Cadastro()
 choosen = 0
+v = Visualiza()
 
 class Menu:
     # função
@@ -18,20 +20,21 @@ class Menu:
         print("=========================")
         print("  ---------------------")
         print("  ||%12s(1)  ||" % c)
-        print("  ||%13s(2) ||" % v)
+        print("  ||%13s(2) ||" % e)
         print("  ||%10s(3)    ||" % s)
         print("  ---------------------")
         m = Menu
         m.choosen(m)
 
     def choosen(self):
+        m = Menu
         escolha = int(input("Informe o indice de sua escolha: "))
         while True:
             if(escolha == 1):
                 m.cadastro(m)
                 break
             elif(escolha == 2):
-                print("\nCarregando arquivos de exibição!")
+                m.visualiza(m)
                 break
             elif(escolha == 3):
                 print("\nAté Logo!")
@@ -43,6 +46,10 @@ class Menu:
     def cadastro(self):
         print("\nCarregando arquivos de cadastro!")
         p.menu_cadastro()
+
+    def visualiza(self):
+        print("\nCarregando arquivos de visualização!")
+        v.menu_cadastro()
 
 if __name__ == '__main__':
     m = Menu

@@ -55,17 +55,22 @@ class Cadastro:
                 escolha = int(input("Informe o indice de sua escolha: "))
 
     def verify(escolha):
+        cad = Cadastro
         if(escolha == 1):
             print("\nCarregando arquivos de Cadastro de Papeis!\n")
             papel.cadastro(papel)
+            cad.menu_cadastro(cad)
         elif(escolha == 2):
             print("\nCarregando arquivos de Cadastro de Caixas de Lapis!\n")
             caixaLapis.cadastro(caixaLapis)
+            cad.menu_cadastro(cad)
         elif (escolha == 3):
             print("\nCarregando arquivos de Cadastro de Cadernos!\n")
             caderno.cadastro(caderno)
+            cad.menu_cadastro(cad)
         elif (escolha == 4):
             print("\nEscolheu retornar ao menu inicial!\n")
+            retornar()
         else:
             print("\nOpção invalida!\nIremos retornar ao menu Inicial!\n")
 
@@ -74,7 +79,3 @@ def retornar():
     from Main import Menu
     m = Menu
     m.menu(m)
-
-"""if __name__ == '__main__':
-    prod = Cadastro
-    prod.menu_cadastro(prod)"""
