@@ -24,7 +24,8 @@ class Papel(Produtos):
 
         p = Papel(gramatura, formato, textura, tipo, lista[0], lista[1]) # passando os valores como parametros
 
-        papel = (p.marca, gramatura, formato, textura, tipo, p.preco)# criando uma lista com as informações inseridas pelo usuario
+        papel = (p.marca, gramatura, formato, textura, tipo, p.preco)# criando uma lista com as informações ]
+                                                                    # inseridas pelo usuario
 
         arquivo.write(str(papel) + "\n")# convertendo a lista para uma string e armazenando em um arquivo de texto
         print("\nPapel Cadastrado com Sucesso!\n")

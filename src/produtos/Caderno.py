@@ -29,7 +29,8 @@ class Caderno(Produtos):
 
         c = Caderno(tamanho, gramatura, qtdFolhas, capa, lista[0], lista[1])
 
-        caderno = (c.marca, tamanho, gramatura, qtdFolhas, capa, c.preco)  # criando uma lista com as informações inseridas pelo usuario
+        caderno = (c.marca, tamanho, gramatura, qtdFolhas, capa, c.preco)  # criando uma lista com as informações
+                                                                            # inseridas pelo usuario
 
         arquivo.write(str(caderno) + "\n")  # convertendo a lista para uma string e armazenando em um arquivo de texto
         print("\nCaderno Cadastrado com Sucesso!\n")
