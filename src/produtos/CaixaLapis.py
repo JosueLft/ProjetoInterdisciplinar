@@ -25,7 +25,8 @@ class CaixaLapis(Produtos):
 
         caixa = (cl.marca, qtd, colorido, cl.preco)  # criando uma lista com as informações inseridas pelo usuario
 
-        arquivo.write(str(caixa) + "\n")  # convertendo a lista para uma string e armazenando em um arquivo de texto
+        c = str(caixa)
+        arquivo.write(c + "\n")  # convertendo a lista para uma string e armazenando em um arquivo de texto
 
         print("\nCaixa de Lápis Cadastrado com Sucesso!\n")
 
